@@ -1,0 +1,10 @@
+<h1 class="alert alert-success"><p>To Do List</p></h1>
+<div class="container ml-2">
+<ul class="alert alert-warning">
+    <li *ngFor="let item of toDoList">{{item}}</li>
+</ul>
+<input class =" alert alert-primary"[(ngModel)]="toDo" (keyup.enter)="add()"/>
+
+<button class = "btn btn-primary container"(click)="add()">AddToDo</button>
+<button class = "btn btn-primary container mt-2" (click)="remove(toDo)">RemoveToDo</button>
+</div>
